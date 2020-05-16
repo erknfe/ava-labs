@@ -1,0 +1,769 @@
+{
+	"info": {
+		"_postman_id": "86f50a38-b749-4e9b-8825-1c14b22925a8",
+		"name": "ava-cascade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "admin.peers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"admin.peers\",\n    \"params\":{},\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/admin",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin.getNodeID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n\t\"method\": \"admin.getNodeID\",\n\t\"params\":{},\n\t\"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/admin",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Keystore",
+			"item": [
+				{
+					"name": "keystore.createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n     \"id\": 1,\n     \"method\": \"keystore.createUser\",\n     \"params\": {\n         \"username\": \"test\",\n         \"password\": \"CascadeTest[1357\"\n     }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/keystore",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"keystore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "keystore.listUsers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\":\"2.0\",\n    \"id\"     :1,\n    \"method\" :\"keystore.listUsers\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/keystore",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"keystore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "keystore.exportUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\":\"2.0\",\n    \"id\"     :1,\n    \"method\" :\"keystore.exportUser\",\n    \"params\" :{\n        \"username\"  :\"erknfe\",\n        \"password\"  :\"CascadeTest[2020\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/keystore",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"keystore"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "keystore.importUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\":\"2.0\",\n    \"id\"     :1,\n    \"method\" :\"keystore.importUser\",\n    \"params\" :{\n        \"username\":\"erkan\",\n        \"password\":\"CascadeTest[1357\",\n        \"user\"    :\"9im3xAFxhUvkmEaWB254CSDKj4Ptv1hi2vMLPodg7ZyHxWLooZDL9hhthLFkWx9HHaT2WbBBmXJPTPwyVL3Ji6WFuoKj6MChwv68FwK4zdUDS9pUtg7QbJckTJfB74dnS9AABe4WvwM8aUScoUC5mzDeyaSDkX8YB58Y6AZ9t53sMtAxL1296xXcovWwCw73EzXTGoiphprK4QALYGmn6p7rwfofdDnAK3msxbcSbdiWUwL621nguy1nTKcoGQxHhkLwmuhFxngWnpAYcpJtvXsNzmydHNRpsB2NyGMpKRH982Nufod9hZFY1oFUDdaPJNL2doGBmR3WX1GCG2eXgBJRXVKm7dmm9gg9eLd24pTeEE75MqLbdoCqPtWwixSmdam5ii9PbAPoq99a4LWngrgf7aoqk1RZtCLXNNBs66aaibiMj1gmvE7gr47GyPh5QXwUfujJ8JPBqmEoZvbvMUq2x14eLzk9FfeCzznM58LXkaUex4kGP6dGLbHZG27eGczX5nSJqC1uaH4B4uvXLPYtagam1vwad12573x2XyxKyYzCrEJRFvZvstHv3x5Q28dZhvpR5wzXVYainM54tsTRhQR1EMxCBdxTybmGogCGWaoovAGYqxbjghhF22f66Yv4wZLazjx2ugMKhUxW2StH7XPp2K7btwdgmBwqT5yiB4exmeQWqAyz1VLn4qkoJy9UYxU5YznyXMAKGacWkt75XLUHmcgEBLkF9mr679bjdstBmdkC9uSkoXoi5wYa1nRqGW5a4TQTfvT3q9dV6QrCyZhoBXtu621Ge4RDj1NpPo9Q9J7PZccxfnkbBTPg9gEn3q1nKgda1ux2rcHBz7DkrWBV3hr4JCGT1uRn9ro27Y2doAr6u\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/keystore",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"keystore"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "AVM (X-Chain)",
+			"item": [
+				{
+					"name": "avm.createAddress",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\":\"2.0\",\n    \"id\"     :2,\n    \"method\" :\"avm.createAddress\",\n    \"params\" :{\n        \"username\": \"test\",\n        \"password\": \"CascadeTest[1357\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/bc/X",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"bc",
+								"X"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "avm.getBalance",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\":\"2.0\",\n    \"id\"     :3,\n    \"method\" :\"avm.getBalance\",\n    \"params\" :{\n        \"address\":\"X-8uLKVrPocDz8Pa55pwzEoAgRLUUSJYK6t\",\n        \"assetID\"  :\"2XAdfM9sadwPULmWJNF9c1fRNyH8LTbvxhUGYKW2Bi8rSn3AKf\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/bc/X",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"bc",
+								"X"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "avm.getAllBalances",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\":\"2.0\",\n    \"id\"     : 2,\n    \"method\" :\"avm.getAllBalances\",\n    \"params\" :{\n        \"address\":\"X-8uLKVrPocDz8Pa55pwzEoAgRLUUSJYK6t\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/bc/X",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"bc",
+								"X"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "avm.send",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\":\"2.0\",\n    \"id\"     :5,\n    \"method\" :\"avm.send\",\n    \"params\" :{\n        \"username\"   :\"test\",\n        \"password\"\t :\"CascadeTest[1357\",\n        \"assetID\"    :\"AVA\",\n        \"amount\"     :2500,\n        \"to\"         :\"X-2SfQz1Lyx7w7KmGq31fdCiGr3rKkLyNT9\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/bc/X",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"bc",
+								"X"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "avm.getTxStatus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\":\"2.0\",\n    \"id\"     :6,\n    \"method\" :\"avm.getTxStatus\",\n    \"params\" :{\n        \"txID\":\"4ujhj75xi8MjvNYrRfVNzm5DswALvjTs9nrL6Q5BNC3UpPXic\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/bc/X",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"bc",
+								"X"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "avm.exportAVA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\":\"2.0\",\n    \"id\"     :1,\n    \"method\" :\"avm.exportAVA\",\n    \"params\" :{\n        \"to\":\"LsRsACP8YiLLBELrGW2QYh6VRuyDuFXTQ\",\n        \"amount\": 20000,\n        \"username\"   :\"test\",\n        \"password\"\t :\"CascadeTest[1357\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/bc/X",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"bc",
+								"X"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "avm.createFixedCapAsset",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\":\"2.0\",\n    \"id\"     : 1,\n    \"method\" :\"avm.createFixedCapAsset\",\n    \"params\" :{\n        \"name\": \"EFE Treasures\",\n        \"symbol\":\"EFET\",\n        \"denomination\": 0,\n        \"initialHolders\": [\n            {\n                \"address\": \"X-8uLKVrPocDz8Pa55pwzEoAgRLUUSJYK6t\",\n                \"amount\": 100\n            }\n        ],\n        \"username\"   :\"test\",\n        \"password\"\t :\"CascadeTest[1357\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/bc/X",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"bc",
+								"X"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Platform (P-Chain)",
+			"item": [
+				{
+					"name": "platform.createAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"jsonrpc\": \"2.0\",\n    \"method\": \"platform.createAccount\",\n    \"params\": {\n        \"username\"   :\"test\",\n        \"password\"\t :\"CascadeTest[1357\"\n    },\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/P",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"P"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "platform.importAVA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"platform.importAVA\",\n    \"params\": {\n        \"username\"   :\"test\",\n        \"password\"\t :\"CascadeTest[1357\",\n        \"to\":\"LsRsACP8YiLLBELrGW2QYh6VRuyDuFXTQ\",\n        \"payerNonce\":1\n    },\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/bc/P",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"bc",
+								"P"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "platform.issueTx1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"platform.issueTx\",\n    \"params\": {\n        \"tx\":\"1117xBwcr5fo1Ch4umyzm7WUC293XqxgVUUjBLugp2VxHzARnSp5eY66b2zUxXuU8j85syXHESUXy8jLGk5wqybmsk8D36EyomQswnNikcFYDEw9kbvEuNAb3uUbXwgTjVV9w1q7SLjARaYZ2mhySbVHWAFSXb851sDtPzaDgf4k21WD5HVmENZzCLMRR6dNvRCi9SQQuuh9zRojqLKavk7WN6hpsnpeYH14dkQeJBvqxzU9zMCv1LqbMnm1Yo7spAU2ZPCtSAQwH9gvsuZDtPDKvjUZB2Prmm8ik3vuGHspYUCsESD1c684AAY7H7t2oPQJR2SiDrKCbmw1DUS1WRHzEfNCEk54aG9h7MaM1JZA5kaqtGgyf\"\n    },\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/bc/P",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"bc",
+								"P"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "platform.getAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"platform.getAccount\",\n    \"params\":{\n        \"address\":\"LsRsACP8YiLLBELrGW2QYh6VRuyDuFXTQ\"\n    },\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/bc/P",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"bc",
+								"P"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "platform.addDefaultSubnetValidator",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "53b958f1-552f-40cf-abe1-79eb778ba7ed",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"platform.addDefaultSubnetValidator\",\n    \"params\": {\n        \"id\":\"4t7nWnbMibYSuHWqttQsWrtasCVvCP3bV\",\n        \"payerNonce\":2,\n        \"destination\":\"LsRsACP8YiLLBELrGW2QYh6VRuyDuFXTQ\",\n        \"startTime\":1588559700,\n        \"endTime\":1591238400,\n        \"stakeAmount\":20000\n    },\n    \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/P",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"P"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "platform.sign",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"platform.sign\",\n    \"params\": {     \"tx\":\"1112NPnoBAbWWVr5v9LGHLVWksw7KgqxMcrQAti2aG2YEL54bTzMk52dnHFYb8fmy7vng88dfcqLRs5oGkMqYcLBSYh1Z357mZk5kqhgBWNW1XuGv7BSKbVaeYNqAFrVepQbAWfe5H7EE1AJqPCoQoxEwoLVGo8AU8GgSMRCAnR36RhCLtFTntpcw8g1BszghuK1qfUaPi1FvArX\",\n        \"signer\":\"LsRsACP8YiLLBELrGW2QYh6VRuyDuFXTQ\",\n        \"username\"   :\"test\",\n        \"password\"\t :\"CascadeTest[1357\"\n    },\n    \"id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/P",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"P"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "platform.issueTx3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"platform.issueTx\",\n    \"params\": {\n        \"tx\":\"1112NPnoBAbWWVr5v9LGHLVWksw7KgqxMcrQAti2aG2YEL54bTzMk52dnHFYb8fmy7vng88dfcqLRs5oGkMqYcLBSYh1Z357mZk5kqhgBWNW1XuGv8WYbe4WE1EckdmgiQyszjRbDPDLsvG4b6QG263tDRE13GCimdhTdhSfQJSQYg7WgdYokaJhi9Mgz743ixCFqoCao7yaS2bJ\"\n    },\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/P",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"P"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "platform.getPendingValidators",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"platform.getPendingValidators\",\n    \"params\": {},\n    \"id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/P",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"P"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "platform.getCurrentValidators",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\": \"2.0\",\n    \"method\": \"platform.getCurrentValidators\",\n    \"params\": {},\n    \"id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/P",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"P"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "platform.listAccounts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jsonrpc\":\"2.0\",\n    \"id\"     :1,\n    \"method\" :\"platform.listAccounts\",\n    \"params\" :{\n        \"username\"   :\"test\",\n        \"password\"\t :\"CascadeTest[1357\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9650/ext/P",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9650",
+							"path": [
+								"ext",
+								"P"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
