@@ -5,3 +5,10 @@ nohup ./avalanchego &
 
 top -b -s -n 1 | grep avalanchego
 ps -eo etime,args | grep avalanchego
+
+curl -X POST --data '{
+    "jsonrpc": "2.0",
+    "method": "info.getNodeID",
+    "params":{},
+    "id": 1
+}' -H 'content-type:application/json;' 127.0.0.1:9650/ext/info
